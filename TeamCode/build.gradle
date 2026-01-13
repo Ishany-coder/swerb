@@ -22,7 +22,25 @@ android {
         jniLibs.useLegacyPackaging true
     }
 }
-
+repositories {
+    maven {
+        url "https://repo.dairy.foundation/releases"
+    }
+    maven {
+        url "https://repo.dairy.foundation/releases"
+    }
+    maven {
+        url "https://repo.dairy.foundation/snapshots"
+    }
+    maven {
+        url = 'https://maven.brott.dev/'
+    }
+    mavenCentral()
+}
 dependencies {
+    implementation "com.acmerobotics.dashboard:dashboard:0.5.1"
+    implementation "org.solverslib:core:0.3.3" // add SolversLib core
+    implementation "org.solverslib:core:0.3.3" // core
+    implementation "org.solverslib:pedroPathing:0.3.3" // pedroPathing
     implementation project(':FtcRobotController')
 }
